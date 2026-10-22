@@ -41,3 +41,19 @@
 - 结果：`pom.xml` 与源码迁到 `backend/`。包为 `afts.config`、`afts.agents`、`afts.harness` 及其 `runtime`、`context`、`policies`，`afts.workflow` 及其 `graphs`、`nodes`、`state`、`delegation`、`checkpoints`，以及 `memory`、`tools`、`execution`、`domain`、`persistence`、`observability`、`api`。每个包只有 `package-info.java`。仓库根不再有 `pom.xml` 和 `src/`。空目录用 `.gitkeep` 保住。新增 `plan/afts-layout.md`，并改了 `plan/afts-architecture.md` 的目录树。未改依赖版本，未写 Harness 行为。
 - 验证：在 `backend/` 执行 `mvn -B clean test`，退出码 0，`BUILD SUCCESS`。编译 20 个主源文件、1 个测试。`afts.AftsApplicationTest`：Tests run: 1, Failures: 0, Errors: 0, Skipped: 0。日志含 `Spring Boot :: (v4.1.1)`。
 - 偏差：无。
+
+## 2026-10-21 · Python 基础工具
+
+- 日期：2026-10-21
+- 指令：从 `/Users/eric/Documents/MSIS/Info 7374 Trading/code` 找量化分析与因子代码，做成工具放进 `python/`。环境用 Anaconda，conda env 名为 `fina-tech`，版本固定；上线后由用户选择环境。
+- 结果：课程目录只有 Lecture1–2 共 11 个 notebook，无因子代码（只读，未改）。新增 `plan/afts-python-tools.md`；`python/scripts/` 下 `cli.py`、`return_stats.py`、`risk_metrics.py`、`ols_regression.py`；`python/tests/` 三个测试文件；`python/pytest.ini`、`environment.yml`、`pinned-versions.txt`。创建 conda env（先名 `afts-tools`，按用户中途指令 `conda rename` 为 `fina-tech`）。`.gitignore` 加 Python 缓存。删除 `python/scripts/.gitkeep`。`dev-plan.md`、`plan/README.md` 只改索引。
+- 验证：`/opt/anaconda3/envs/fina-tech/bin/python -m pytest -q`（在 `python/`）：16 passed。首次运行 2 个失败，均为测试本身问题（一处手算期望值错误；异方差合成数据对称，Breusch-Pagan 测不出），修正后通过。手动 CLI 冒烟：三个工具对合成 CSV 均退出码 0 并输出 JSON，CAPM 合成真值 beta 1.3，估计 1.303；缺列时退出码 2，stderr 有错误信息。
+- 偏差：新增 `python/tests/` 目录（`afts-layout.md` 未列出，也未禁止）。
+
+## 2026-10-21 · FX work case 草案
+
+- 日期：2026-10-21
+- 指令：经头脑风暴后输出 work case 的 plan；随后要求在主目录 `workflow-design-1` 上按两份草案更新。
+- 结果：新增 `plan/afts-workcase-fx.md`（模板参数、阶段与关卡、Project 目录与读写权限、git 规则、导入、通信、返工、插话、唤醒、资源控制、考场与前向比较、待决定、完成定义）与 `plan/afts-workcase-fx-capabilities.md`（Python Tool、后端 Tool、Skill、MCP）。`dev-plan.md`、`plan/README.md` 只加索引并改停靠点。两份草案先在会话 worktree 起草，再复制到主目录；主目录其余改动用脚本做精确替换。未写代码，未改 `.gitignore`，未提交。
+- 验证：未运行。本步只有文档。
+- 偏差：无。

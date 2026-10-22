@@ -1,0 +1,7 @@
+# conda env fina-tech, recorded 2026-10-21
+Python 3.12.15
+numpy 2.5.4
+pandas 3.0.6
+scipy 1.18.1
+statsmodels 0.15.0
+pytest 9.1.1
