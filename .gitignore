@@ -21,3 +21,8 @@ target/
 # Secrets stay out of git. Do not commit values.
 .env
 .env.*
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/

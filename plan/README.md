@@ -16,6 +16,9 @@
 | [afts-architecture.md](afts-architecture.md) | 施工：逻辑目录与模块职责 | 已采纳 |
 | [afts-layout.md](afts-layout.md) | 施工：目录迁移 | 完成 |
 | [afts-scaffold.md](afts-scaffold.md) | 施工：本地单模块脚手架 | 完成；工程已迁到 `backend/` |
+| [afts-python-tools.md](afts-python-tools.md) | 施工：Python 基础工具 | 完成 |
+| [afts-workcase-fx.md](afts-workcase-fx.md) | 设计：FX 区间预测 workflow 模板 | 草案，待确认；未施工 |
+| [afts-workcase-fx-capabilities.md](afts-workcase-fx-capabilities.md) | 设计：该模板的 Tool / Skill / MCP 清单 | 草案，待确认；未施工 |
 | [00-process.md](00-process.md) | 施工：安装开发流程 | 完成 |
 
 ## 参考

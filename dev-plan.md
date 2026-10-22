@@ -16,6 +16,9 @@
 | 逻辑目录与模块职责 | [plan/afts-architecture.md](plan/afts-architecture.md) | 已采纳 |
 | 目录迁移到 `backend/` 与仓库根空目录 | [plan/afts-layout.md](plan/afts-layout.md) | 完成 |
 | 本地单模块脚手架 | [plan/afts-scaffold.md](plan/afts-scaffold.md) | 完成；工程已迁到 `backend/` |
+| Python 基础工具（课程代码提炼） | [plan/afts-python-tools.md](plan/afts-python-tools.md) | 完成 |
+| Work case：FX 区间预测模板 | [plan/afts-workcase-fx.md](plan/afts-workcase-fx.md) | 草案，待确认 |
+| Work case 能力清单（Tool / Skill / MCP） | [plan/afts-workcase-fx-capabilities.md](plan/afts-workcase-fx-capabilities.md) | 草案，待确认 |
 | 安装开发流程文档 | [plan/00-process.md](plan/00-process.md) | 完成 |
 | `plan/` 目录说明 | [plan/README.md](plan/README.md) | 完成 |
 
@@ -25,4 +28,4 @@
 
 ## 停靠点
 
-目录已迁完。单轮 Harness 尚未开始。下一步仍等待用户的施工指令。
+目录已迁完。Python 三个基础工具已完成。FX work case 模板与能力清单已起草，等待用户确认其中「待用户决定」各项。单轮 Harness 尚未开始。
